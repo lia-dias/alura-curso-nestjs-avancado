@@ -13,6 +13,7 @@ export default class UsuarioService {
 
     create(usuario: Usuario): Usuario {
         usuario.id = this.getNextId();
+        usuario.dataDeCadastro = (new Date(Date.now())).toISOString();
         this.usuarios.push(usuario);
         return usuario;
     }
