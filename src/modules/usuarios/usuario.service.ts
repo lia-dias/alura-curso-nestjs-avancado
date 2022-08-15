@@ -7,7 +7,7 @@ export default class UsuarioService {
     private nextId = 1;
     private usuarios: Usuario[] = [];
 
-    getNextId() {
+    private getNextId() {
         return this.nextId++;
     }
 
